@@ -1,9 +1,12 @@
 import React from 'react';
 
 import {InputContainer} from './styles'
-const Input = () => {
+
+const Input = ({value, onChange}) => {
     return (
-        <InputContainer><input/></InputContainer>
+        <InputContainer>
+            <input value={value} onChange={onChange}/>
+        </InputContainer>
     )
 }
 export default Input;
