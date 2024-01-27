@@ -1,8 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import {SidebarItemContainer} from "./styles";
+import {SidebarItemProps} from "../../../../../types/components/ListRepo/ItemRepo/Sidebar/SiderbarItem";
 
-const SidebarItem = ({children}) => {
+const SidebarItem = ({children} : SidebarItemProps) => {
     return (
         <SidebarItemContainer>
             {children}
@@ -10,7 +10,4 @@ const SidebarItem = ({children}) => {
     );
 };
 
-SidebarItem.propTypes = {
-    children: PropTypes.node
-};
 export default SidebarItem;

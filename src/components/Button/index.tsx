@@ -1,7 +1,10 @@
 import React from 'react';
 import {ButtonContainer} from "./styles";
 
-const Button = ({onClick}) => {
+interface ButtonProps {
+    onClick : () => void
+}
+const Button = ({onClick} : ButtonProps) => {
     return (
         <ButtonContainer onClick={onClick}>
             Search
