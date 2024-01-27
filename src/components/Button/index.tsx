@@ -1,10 +1,8 @@
 import React from 'react';
 import {ButtonContainer} from "./styles";
+import {ButtonProps} from "../../types/components/Button";
 
-interface ButtonProps {
-    onClick : () => void
-}
-const Button = ({onClick} : ButtonProps) => {
+const Button = ({onClick}: ButtonProps) => {
     return (
         <ButtonContainer onClick={onClick}>
             Search
