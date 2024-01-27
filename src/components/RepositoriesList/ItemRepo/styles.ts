@@ -56,6 +56,4 @@ export const ItemContainer = styled.div`
             padding: 0;
         }
     }
-
-
 `

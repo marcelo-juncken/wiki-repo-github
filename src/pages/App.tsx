@@ -8,6 +8,7 @@ import {api} from "../services/api";
 import RepositoriesList from "../components/RepositoriesList";
 import {Repository} from "../types/Repository";
 import {User} from "../types/User";
+import Profile from "../components/Profile";
 
 function App() {
 
@@ -56,14 +57,17 @@ function App() {
         }
     }
 
+    const reset = () => {
+        setUserSelected(null)
+        setRepositories([])
+    }
+
     return (
         <Container>
-            <div className={"img-container"}>
-                <img className={userSelected ? "user" : ""} src={userSelected ? userSelected.avatar_url : gitLogo} alt={'Logo'}/>
-            </div>
+            <Profile userSelected={userSelected}/>
             <Input value={input} onChange={(e) => setInput(e.target.value)}/>
             <Button onClick={handleSearchRepo}/>
-            <div></div>
+            <button onClick={reset}>RESETAR</button>
             <RepositoriesList repositories={repositories} onRemoveRepo={handleRemoveRepo}/>
 
         </Container>
