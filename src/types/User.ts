@@ -6,7 +6,6 @@ export class User {
     private _followers: number;
     private _bio: string;
 
-
     constructor(id: number, name: string, avatar_url: string, location: string, followers: number, bio: string) {
         this._id = id;
         this._name = name;
@@ -15,6 +14,7 @@ export class User {
         this._followers = followers;
         this._bio = bio;
     }
+
 
     get id(): number {
         return this._id;
