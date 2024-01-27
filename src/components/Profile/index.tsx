@@ -1,13 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import gitLogo from "../../assets/github.png";
-import {User} from "../../types/User";
 import {ProfileContainer} from "./styles";
-import SidebarItem from "../RepositoriesList/ItemRepo/Sidebar/SidebarItem";
+import IconWithValue from "../IconWithValue";
 import {FaUserGroup as FollowersIcon} from "react-icons/fa6";
+import {ProfileProps} from "../../types/components/Profile";
 
-interface ProfileProps {
-    userSelected: User | null
-}
 
 const Profile = ({userSelected}: ProfileProps) => {
 
@@ -17,7 +14,7 @@ const Profile = ({userSelected}: ProfileProps) => {
         setStatus((statusBefore) => {
             if (userSelected) return "active"
 
-            if(statusBefore === "active") return "inactive"
+            if (statusBefore === "active") return "inactive"
 
             return ""
         })
@@ -29,10 +26,10 @@ const Profile = ({userSelected}: ProfileProps) => {
             <h3 className={status}>{userSelected?.bio}</h3>
             <h4 className={status}>{userSelected?.location}</h4>
             <div className={`followers ${status}`}>
-                <SidebarItem direction={"row"}>
+                <IconWithValue direction={"row"}>
                     <p className={"follower-text"}>{userSelected?.followers}</p>
                     <FollowersIcon className={`fa-icon follower followers-${userSelected?.followers}`}/>
-                </SidebarItem>
+                </IconWithValue>
             </div>
             <img className={status} src={userSelected ? userSelected.avatar_url : gitLogo}
                  alt={'Logo'}/>

@@ -1,13 +1,10 @@
-import gitLogo from '../assets/github.png'
-
 import {Container} from "./styles";
 import Input from "../components/Input";
 import Button from "../components/Button";
 import {useState} from "react";
 import {api} from "../services/api";
-import RepositoriesList from "../components/RepositoriesList";
-import {Repository} from "../types/Repository";
-import {User} from "../types/User";
+import CardList from "../components/CardList";
+import {Repository, User} from "../models";
 import Profile from "../components/Profile";
 
 function App() {
@@ -68,7 +65,7 @@ function App() {
             <Input value={input} onChange={(e) => setInput(e.target.value)}/>
             <Button onClick={handleSearchRepo}/>
             <button onClick={reset}>RESETAR</button>
-            <RepositoriesList repositories={repositories} onRemoveRepo={handleRemoveRepo}/>
+            <CardList repositories={repositories} onRemoveRepo={handleRemoveRepo}/>
 
         </Container>
     );

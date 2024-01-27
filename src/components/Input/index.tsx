@@ -1,12 +1,10 @@
 import React from 'react';
 
 import {InputContainer} from './styles'
+import {InputProps} from "../../types/components/Input";
 
-interface InputProps {
-    value: string,
-    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
-}
-const Input = ({value, onChange} : InputProps) => {
+
+const Input = ({value, onChange}: InputProps) => {
     return (
         <InputContainer>
             <input value={value} onChange={onChange}/>

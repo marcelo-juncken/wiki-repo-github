@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ProfileContainer = styled.div`
     width: 100%;
     min-height: calc(90px + 32px);
-    background-color: #2B3E53;
+    background-color: ${props => props.theme.colors.secondaryBg};
     padding: 16px 0;
     display: flex;
     position: relative;
