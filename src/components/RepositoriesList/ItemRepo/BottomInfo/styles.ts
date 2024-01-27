@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import {BottomInfoContainerProps} from "../../../../types/components/ListRepo/ItemRepo/BottomInfo";
 
-export const BottomInfoContainer = styled.div`
+export const BottomInfoContainer = styled.div<BottomInfoContainerProps>`
     display: flex;
     grid-area: footer_info;
     justify-content: space-between;
@@ -10,7 +11,7 @@ export const BottomInfoContainer = styled.div`
         font-size: 16px;
 
         &:nth-child(1) {
-            color: ${props => props.languageColor};
+            color: ${props => props.languagecolor};
             font-weight: bold;
         }
     }
