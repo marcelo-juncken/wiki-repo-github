@@ -8,8 +8,11 @@ const CardFooter = ({language, updatedAt}: CardFooterProps) => {
 
     return (
         <CardFooterContainer languagecolor={languageColor}>
-            <p>{language}</p>
-            <p>Last edited: {updatedAt.split('T')[0]}</p>
+            <div className="language-container">
+                <span className="language-dot"></span>
+                <p className="language-name">{language}</p>
+            </div>
+            <p className="date-container">Last edited: {updatedAt.split('T')[0]}</p>
         </CardFooterContainer>
     );
 };

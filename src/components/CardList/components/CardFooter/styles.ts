@@ -15,13 +15,26 @@ export const CardFooterContainer = styled.div<CardFooterContainerProps>`
     font-weight: bold;
     white-space: nowrap;
     overflow: hidden;
-    p {
-        &:nth-child(1) {
-            color: ${props => props.languagecolor || props.theme.colors.languageDefault};
-        }
+    
+    div.language-container {
+        display: inline-flex;
+        align-items: center;
+    }
 
-        &:nth-child(2) {
-            color: black;
-        }
+    div span.language-dot {
+        background-color: ${props => props.languagecolor || props.theme.colors.languageDefault};
+        height: 0.8em;
+        width: 0.8em;
+        border: none;
+        border-radius: 16px;
+    }
+
+    div.language-container .language-name {
+        color: ${props => props.languagecolor || props.theme.colors.languageDefault};
+        margin-left: 4px;
+    }
+    
+    p.date-container {
+        color: black;
     }
 `
