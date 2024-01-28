@@ -9,4 +9,11 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    
+    .buttons-container{
+        display: flex;
+        width: 80%;
+        margin: 0 20px 20px 20px;
+
+    }
 `

@@ -15,7 +15,7 @@ export const ProfileContainer = styled.div`
         margin-left: calc(50% - 45px);
         position: absolute;
     }
-    
+
     &.active {
         display: grid;
         grid-template-areas: 
@@ -97,7 +97,7 @@ export const ProfileContainer = styled.div`
 
     @keyframes displayProfile {
         to {
-            visibility: visible; 
+            visibility: visible;
             opacity: 1;
         }
     }

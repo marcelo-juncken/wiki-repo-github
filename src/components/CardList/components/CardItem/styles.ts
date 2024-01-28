@@ -25,7 +25,7 @@ export const CardItemContainer = styled.div`
         height: 100%;
         grid-area: title;
         margin: 16px 16px;
-        
+
         overflow: hidden;
         white-space: nowrap;
     }
@@ -37,11 +37,11 @@ export const CardItemContainer = styled.div`
 
         overflow: hidden;
         overflow-y: auto;
-        scrollbar-width: none; 
-        -ms-overflow-style: none; 
+        scrollbar-width: none;
+        -ms-overflow-style: none;
 
         &::-webkit-scrollbar {
-            display: none; 
+            display: none;
         }
     }
 

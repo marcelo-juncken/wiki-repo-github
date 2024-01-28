@@ -1,24 +1,12 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import gitLogo from "../../assets/github.png";
 import {ProfileContainer} from "./styles";
 import IconWithValue from "../IconWithValue";
 import {FaUserGroup as FollowersIcon} from "react-icons/fa6";
 import {ProfileProps} from "../../types/components/Profile";
 
+const Profile = ({userSelected, status}: ProfileProps) => {
 
-const Profile = ({userSelected}: ProfileProps) => {
-
-    const [status, setStatus] = useState<"active" | "inactive" | "">("")
-
-    useEffect(() => {
-        setStatus((statusBefore) => {
-            if (userSelected) return "active"
-
-            if (statusBefore === "active") return "inactive"
-
-            return ""
-        })
-    }, [userSelected])
 
     return (
         <ProfileContainer className={status}>
