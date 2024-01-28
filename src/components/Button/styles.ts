@@ -7,8 +7,8 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
     border-radius: ${props => props.theme.borderRadius};
     min-height: ${props => props.theme.sizes.buttonHeight};
     width: 100%;
-    margin-left: ${props => props.marginLeft || 0};
-    margin-right: ${props => props.marginRight || 0};
+    margin-left: ${props => props.marginleft || 0};
+    margin-right: ${props => props.marginright || 0};
     &:hover {
         background-color: ${props => props.theme.colors.buttonHoverBg};
         cursor: pointer;

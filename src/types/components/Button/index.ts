@@ -1,12 +1,12 @@
 export interface ButtonProps {
     text: string
     classname?: string
-    marginLeft? : string
-    marginRight? : string
+    marginleft? : string
+    marginright? : string
     onClick : () => void
 }
 
 export interface ButtonContainerProps {
-    marginLeft? : string
-    marginRight? : string
+    marginleft? : string
+    marginright? : string
 }

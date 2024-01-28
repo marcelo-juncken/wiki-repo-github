@@ -8,14 +8,6 @@ export const ProfileContainer = styled.div`
     display: flex;
     position: relative;
 
-    img {
-        width: 90px;
-        height: 90px;
-        border-radius: 100px;
-        margin-left: calc(50% - 45px);
-        position: absolute;
-    }
-
     &.active {
         display: grid;
         grid-template-areas: 
@@ -23,25 +15,36 @@ export const ProfileContainer = styled.div`
             'bio location';
         justify-content: space-between;
         padding-left: calc(10% + 90px + 16px);
-        padding-right: calc(10% + 16px);
+        padding-right: calc(10%);
         align-items: center;
+    }
 
-        h2, h3, h4, .followers {
-            animation: displayProfile 0.5s ease-in-out 0.9s forwards;
-            visibility: hidden;
-            opacity: 0;
-            overflow: hidden;
-            white-space: nowrap;
+    img {
+        width: 90px;
+        height: 90px;
+        border-radius: 100px;
+        left: calc(50% - 45px);
+        position: absolute;
+        transition: left 0.9s ease-in-out;
+
+
+        &.active {
+            left: 10%;
         }
     }
 
-    &.inactive {
-        h2, h3, h4{
-            animation: displayProfileReverse 0.5s ease-in-out forwards;
-        }
+    h2, h3, h4, .followers {
+        visibility: hidden; 
+        opacity: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        color: white;
+        transition: 0s;
 
-        img {
-            animation: slideLeftReverse 0.9s ease-in-out forwards;
+        &.active {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.9s ease-in-out 0.6s;
         }
     }
 
@@ -51,11 +54,6 @@ export const ProfileContainer = styled.div`
 
     .followers, h4 {
         justify-self: flex-end;
-    }
-
-    h2, h3, h4, .followers {
-        visibility: hidden;
-        color: white;
     }
 
     h2.active {
@@ -72,44 +70,5 @@ export const ProfileContainer = styled.div`
 
     .followers.active {
         grid-area: followers;
-    }
-
-
-
-    img.active {
-        animation: slideLeft 0.9s ease-in-out forwards;
-    }
-
-    @keyframes slideLeft {
-        to {
-            margin-left: 10%;
-        }
-    }
-
-    @keyframes slideLeftReverse {
-        from {
-            margin-left: 10%;
-        }
-        to {
-            margin-left: calc(50% - 45px);
-        }
-    }
-
-    @keyframes displayProfile {
-        to {
-            visibility: visible;
-            opacity: 1;
-        }
-    }
-
-    @keyframes displayProfileReverse {
-        from {
-            visibility: visible;
-            opacity: 1;
-        }
-        to {
-            visibility: hidden;
-            opacity: 0;
-        }
     }
 `;

@@ -25,9 +25,9 @@ function App() {
             <Profile status={status} userSelected={userSelected} onResetClick={reset}/>
             <Input value={inputValue} onChange={(e) => setInputValue(e.target.value)}/>
             <div className="buttons-container">
-                <Button classname={`${status} search-button`} marginRight="8px" text={"Search"}
+                <Button classname={`${status} search-button`} marginright="8px" text={"Search"}
                         onClick={() => handleSearch(inputValue)}/>
-                <Button classname={`${status} reset-button`} marginLeft="8px" text={"Reset"} onClick={reset}/>
+                <Button classname={`${status} reset-button`} marginleft="8px" text={"Reset"} onClick={reset}/>
             </div>
             <CardList repositories={repositories} onRemoveRepo={handleRemoveRepo} onViewClick={handleOnViewClick}/>
         </Container>
