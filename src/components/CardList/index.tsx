@@ -3,7 +3,7 @@ import {CardListContainer} from "./styles";
 import CardItem from "./components/CardItem";
 import {CardListProps} from "../../types/components/CardList";
 
-const CardList = ({repositories, onRemoveRepo}: CardListProps) => {
+const CardList = ({repositories, onRemoveRepo, onViewClick}: CardListProps) => {
     return (
         <CardListContainer>
             {repositories.map(repo => (
@@ -11,6 +11,7 @@ const CardList = ({repositories, onRemoveRepo}: CardListProps) => {
                     key={repo.id}
                     repository={repo}
                     onRemoveRepo={() => onRemoveRepo(repo.id)}
+                    onViewClick={() => onViewClick(repo.html_url)}
                 />
             ))}
         </CardListContainer>

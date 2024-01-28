@@ -2,10 +2,10 @@ import React from 'react';
 import {ButtonContainer} from "./styles";
 import {ButtonProps} from "../../types/components/Button";
 
-const Button = ({onClick}: ButtonProps) => {
+const Button = ({text, marginLeft, marginRight, classname, onClick}: ButtonProps) => {
     return (
-        <ButtonContainer onClick={onClick}>
-            Search
+        <ButtonContainer className={classname} marginLeft={marginLeft} marginRight={marginRight} onClick={onClick}>
+            {text}
         </ButtonContainer>
     );
 };
