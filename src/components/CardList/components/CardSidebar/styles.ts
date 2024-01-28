@@ -5,6 +5,7 @@ export const CardSidebarContainer = styled.div`
     flex-direction: column;
     grid-area: sidebar;
     justify-content: start;
+    margin: 16px 16px 16px 0;
 
     button {
         background: none;

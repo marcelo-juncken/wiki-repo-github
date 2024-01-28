@@ -7,7 +7,7 @@ import {InputProps} from "../../types/components/Input";
 const Input = ({value, onChange}: InputProps) => {
     return (
         <InputContainer>
-            <input value={value} onChange={onChange}/>
+            <input value={value} onChange={onChange} placeholder={"Type username"}/>
         </InputContainer>
     )
 }

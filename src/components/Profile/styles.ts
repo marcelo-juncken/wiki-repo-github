@@ -30,6 +30,8 @@ export const ProfileContainer = styled.div`
             animation: displayProfile 0.5s ease-in-out 0.9s forwards;
             visibility: hidden;
             opacity: 0;
+            overflow: hidden;
+            white-space: nowrap;
         }
     }
 
