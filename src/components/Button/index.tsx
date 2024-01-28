@@ -2,9 +2,9 @@ import React from 'react';
 import {ButtonContainer} from "./styles";
 import {ButtonProps} from "../../types/components/Button";
 
-const Button = ({text, marginLeft, marginRight, classname, onClick}: ButtonProps) => {
+const Button = ({text, marginleft, marginright, classname, onClick}: ButtonProps) => {
     return (
-        <ButtonContainer className={classname} marginLeft={marginLeft} marginRight={marginRight} onClick={onClick}>
+        <ButtonContainer className={classname} marginleft={marginleft} marginright={marginright} onClick={onClick}>
             {text}
         </ButtonContainer>
     );

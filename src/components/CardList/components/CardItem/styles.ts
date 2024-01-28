@@ -15,7 +15,7 @@ export const CardItemContainer = styled.div`
         'description sidebar'
         'footer_info footer_info';
     grid-template-columns: 8fr 1fr;
-    grid-template-rows: 10% 60% 10%;
+    grid-template-rows: 20% 70% 10%;
     align-content: space-between;
     overflow-wrap: anywhere;
 
