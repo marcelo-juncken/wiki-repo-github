@@ -7,7 +7,7 @@ const CardFooter = ({language, updatedAt}: CardFooterProps) => {
     const languageColor = LANGUAGES[language] || '#000'
 
     return (
-        <CardFooterContainer languagecolor={languageColor}>
+        <CardFooterContainer $languagecolor={languageColor}>
             <div className="language-container">
                 <span className="language-dot"></span>
                 <p className="language-name">{language}</p>

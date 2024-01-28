@@ -3,9 +3,9 @@ import {CardListContainer} from "./styles";
 import CardItem from "./components/CardItem";
 import {CardListProps} from "../../types/components/CardList";
 
-const CardList = ({repositories, onRemoveRepo, onViewClick}: CardListProps) => {
+const CardList = ({repositories, status, onRemoveRepo, onViewClick}: CardListProps) => {
     return (
-        <CardListContainer>
+        <CardListContainer className={status}>
             {repositories.map(repo => (
                 <CardItem
                     key={repo.id}

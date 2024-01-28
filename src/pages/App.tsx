@@ -25,11 +25,11 @@ function App() {
             <Profile status={status} userSelected={userSelected} onResetClick={reset}/>
             <Input value={inputValue} onChange={(e) => setInputValue(e.target.value)}/>
             <div className="buttons-container">
-                <Button classname={`${status} search-button`} marginright="8px" text={"Search"}
+                <Button classname={`search-button ${status}`} $marginright="8px" text={"Search"}
                         onClick={() => handleSearch(inputValue)}/>
-                <Button classname={`${status} reset-button`} marginleft="8px" text={"Reset"} onClick={reset}/>
+                <Button classname={`reset-button ${status}`} $marginleft="8px" text={"Reset"} onClick={reset}/>
             </div>
-            <CardList repositories={repositories} onRemoveRepo={handleRemoveRepo} onViewClick={handleOnViewClick}/>
+            <CardList status={status} repositories={repositories} onRemoveRepo={handleRemoveRepo} onViewClick={handleOnViewClick}/>
         </Container>
     );
 }

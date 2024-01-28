@@ -12,5 +12,6 @@ export const GlobalStyles = createGlobalStyle`
         background-color: ${props => props.theme.colors.primaryBg};
         color: ${props => props.theme.colors.text};
         overflow-y: scroll;
+        overflow-x: hidden;
     }
 `;

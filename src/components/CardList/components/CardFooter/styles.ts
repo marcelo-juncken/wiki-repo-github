@@ -22,7 +22,7 @@ export const CardFooterContainer = styled.div<CardFooterContainerProps>`
     }
 
     div span.language-dot {
-        background-color: ${props => props.languagecolor || props.theme.colors.languageDefault};
+        background-color: ${props => props.$languagecolor || props.theme.colors.languageDefault};
         height: 0.8em;
         width: 0.8em;
         border: none;
@@ -30,7 +30,7 @@ export const CardFooterContainer = styled.div<CardFooterContainerProps>`
     }
 
     div.language-container .language-name {
-        color: ${props => props.languagecolor || props.theme.colors.languageDefault};
+        color: ${props => props.$languagecolor || props.theme.colors.languageDefault};
         margin-left: 4px;
     }
     

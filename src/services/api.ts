@@ -1,7 +1,7 @@
 import axios from "axios";
 import {Repository, User} from "../models";
 
-export const api = axios.create({
+const api = axios.create({
     baseURL: 'https://api.github.com'
 })
 
@@ -23,7 +23,7 @@ export const fetchUserData = async (username: string) => {
         userData.bio
     );
 
-    const repos = reposData.map((repoData : Repository) => new Repository(
+    const repos = reposData.map((repoData: Repository) => new Repository(
         repoData.id,
         repoData.name,
         repoData.description,
@@ -34,5 +34,5 @@ export const fetchUserData = async (username: string) => {
         repoData.html_url
     ));
 
-    return { user, repos };
+    return {user, repos};
 };

@@ -1,4 +1,4 @@
-import {useCallback, useState} from "react";
+import {useCallback, useRef, useState} from "react";
 import {Repository, User} from "../models";
 import {fetchUserData} from "../services/api";
 
@@ -7,32 +7,46 @@ export const useUserProfile = () => {
     const [repositories, setRepositories] = useState<Repository[]>([]);
     const [status, setStatus] = useState<"active" | "inactive" | "">("")
 
+    const resetTimeoutRef = useRef<number | null>(null);
+
     const handleSearch = async (username: string) => {
         try {
 
             const {user, repos} = await fetchUserData(username)
 
+            resetTimeoutRef.current && clearTimeout(resetTimeoutRef.current);
+
             setRepositories(repos);
             setUserSelected(user);
             setStatus('active')
 
-        } catch (e: any) {
+        } catch (e) {
             reset()
             alert("Usuário não encontrado")
         }
     }
 
+
     const reset = useCallback(() => {
-        setUserSelected(null);
-        setRepositories([]);
+        if (resetTimeoutRef.current !== null) {
+            clearTimeout(resetTimeoutRef.current);
+            resetTimeoutRef.current = null;
+        }
+
         setStatus('inactive');
+
+        resetTimeoutRef.current = setTimeout(() => {
+            setUserSelected(null);
+            setRepositories([]);
+        }, 900) as unknown as number;
     }, []);
+
 
     const handleRemoveRepo = useCallback((repoId: string) => {
         setRepositories(repos => repos.filter(repo => repo.id !== repoId));
     }, []);
 
-    const handleOnViewClick = (repositoryUrl : string) => {
+    const handleOnViewClick = (repositoryUrl: string) => {
         window.open(repositoryUrl, "_blank", "noopener,noreferrer");
     }
 
