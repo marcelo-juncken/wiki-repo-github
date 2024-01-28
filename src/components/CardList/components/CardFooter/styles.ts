@@ -5,14 +5,23 @@ export const CardFooterContainer = styled.div<CardFooterContainerProps>`
     display: flex;
     grid-area: footer_info;
     justify-content: space-between;
-    align-items: end;
-
+    align-items: center;
+    background-color: white;
+    padding: 0 16px;
+    border: none;
+    border-top: 2px solid black;
+    border-radius: 0 0 16px 16px;
+    font-size: 0.8em;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
     p {
-        font-size: 16px;
-
         &:nth-child(1) {
             color: ${props => props.languagecolor || props.theme.colors.languageDefault};
-            font-weight: bold;
+        }
+
+        &:nth-child(2) {
+            color: black;
         }
     }
 `

@@ -1,11 +1,12 @@
 export const theme = {
     colors: {
-        primaryBg: '#22272e',
-        secondaryBg: '#2B3E53',
+        primaryBg: '#424669',
+        secondaryBg: '#2D3250',
         text: '#FFF',
+        inputBorder: '#000',
         buttonBg: '#FAFAFA',
         buttonHoverBg: '#FAFAFA60',
-        cardBg: '#333',
+        cardBg: '#7077A1',
         languageDefault: '#000',
         viewIcon: '#396739',
         viewIconHover: '#1f3a1f',

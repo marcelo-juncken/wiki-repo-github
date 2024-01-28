@@ -4,12 +4,11 @@ export const CardItemContainer = styled.div`
     width: 100%;
     height: ${props => props.theme.sizes.cardHeight};
     position: relative;
-    padding: 16px;
-    margin: 16px 0;
+    margin: 2% 0;
     background-color: ${props => props.theme.colors.cardBg};
     border: 2px solid #000;
     border-radius: 16px;
-    box-shadow: 2px 2px 32px #000;
+    box-shadow: 2px 2px 16px #000;
     display: grid;
     grid-template-areas: 
         'title sidebar'
@@ -23,14 +22,16 @@ export const CardItemContainer = styled.div`
     h3 {
         font-size: 32px;
         color: ${props => props.theme.colors.text};
+        height: 100%;
         grid-area: title;
+        margin: 16px 16px;
         
         overflow: hidden;
         white-space: nowrap;
     }
 
     h2 {
-        margin-top: 8px;
+        margin: 0 16px 16px 16px;
         font-size: 24px;
         grid-area: description;
 
