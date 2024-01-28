@@ -9,18 +9,24 @@ const Profile = ({userSelected, status}: ProfileProps) => {
 
 
     return (
-        <ProfileContainer className={status}>
-            <h2 className={status}>{userSelected?.name}</h2>
-            <h3 className={status}>{userSelected?.bio}</h3>
-            <h4 className={status}>{userSelected?.location}</h4>
-            <div className={`followers ${status}`}>
+        <ProfileContainer>
+            <h2>{userSelected?.name}</h2>
+            <h3>{userSelected?.bio}</h3>
+            <h4>{userSelected?.location}</h4>
+            <div className={`followers`}>
                 <IconWithValue direction={"row"}>
                     <p className={"follower-text"}>{userSelected?.followers}</p>
                     <FollowersIcon className={`fa-icon follower followers-${userSelected?.followers}`}/>
                 </IconWithValue>
             </div>
-            <img className={status} src={userSelected ? userSelected.avatar_url : gitLogo}
-                 alt={'Logo'}/>
+            <div className={`logo-container-left ${status}`}>
+                <img className="git-logo" src={gitLogo}
+                     alt={'Git Logo'}/>
+                <img className={`user-logo ${status}`} src={userSelected ? userSelected.avatar_url : gitLogo}
+                     alt={'User Logo'}/>
+            </div>
+            <div className={`logo-container-right ${status}`}/>
+
         </ProfileContainer>
 
     );

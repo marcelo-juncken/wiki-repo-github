@@ -4,47 +4,67 @@ export const ProfileContainer = styled.div`
     width: 100%;
     min-height: calc(90px + 32px);
     background-color: ${props => props.theme.colors.secondaryBg};
-    padding: 16px 0;
-    display: flex;
     position: relative;
 
-    &.active {
-        display: grid;
-        grid-template-areas: 
+    display: grid;
+    grid-template-areas: 
             'name followers' 
             'bio location';
-        justify-content: space-between;
-        padding-left: calc(10% + 90px + 16px);
-        padding-right: calc(10%);
-        align-items: center;
-    }
+    justify-content: space-between;
+    padding-left: calc(10% + 90px + 16px);
+    padding-right: calc(10%);
+    align-items: center;
+
 
     img {
         width: 90px;
         height: 90px;
         border-radius: 100px;
-        left: calc(50% - 45px);
         position: absolute;
-        transition: left 0.9s ease-in-out;
+        top: 16px;
+    }
 
+    .logo-container-left {
+        display: flex;
+        justify-content: end;
+        width: calc(50% + 45px);
+        height: calc(90px + 32px);
+        left: 0;
+        background-color: ${props => props.theme.colors.secondaryBg};;
+        border-radius: 100px;
+
+        position: absolute;
+
+        transition: left 0.9s ease-in-out;
+        z-index: 3;
 
         &.active {
-            left: 10%;
+            left: calc(-50% + 10% + 45px);
+        }
+    }
+    
+    .user-logo{
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        
+        &.active{
+            opacity: 1;
         }
     }
 
-    h2, h3, h4, .followers {
-        visibility: hidden; 
-        opacity: 0;
-        overflow: hidden;
-        white-space: nowrap;
-        color: white;
-        transition: 0s;
+    .logo-container-right {
+        width: calc(50% + 45px);
+        min-height: calc(90px + 32px);
+        right: 0;
+        background-color: ${props => props.theme.colors.secondaryBg};;
+
+        position: absolute;
+
+        transition: right 0.9s ease-in-out;
+        z-index: 2;
 
         &.active {
-            opacity: 1;
-            visibility: visible;
-            transition: opacity 0.9s ease-in-out 0.6s;
+            right: calc(-50% + 10% - 45px);
         }
     }
 
@@ -56,19 +76,19 @@ export const ProfileContainer = styled.div`
         justify-self: flex-end;
     }
 
-    h2.active {
+    h2 {
         grid-area: name;
     }
 
-    h3.active {
+    h3 {
         grid-area: bio;
     }
 
-    h4.active {
+    h4 {
         grid-area: location;
     }
 
-    .followers.active {
+    .followers {
         grid-area: followers;
     }
 `;

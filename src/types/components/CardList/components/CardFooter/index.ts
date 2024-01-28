@@ -4,5 +4,5 @@ export interface CardFooterProps {
 }
 
 export interface CardFooterContainerProps {
-    languagecolor: string;
+    $languagecolor: string;
 }
