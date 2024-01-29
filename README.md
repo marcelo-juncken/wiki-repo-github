@@ -1,6 +1,6 @@
 # GitHub User Repositories Viewer
 
-Este projeto é uma aplicação web desenvolvida em React que permite aos usuários pesquisar perfis do GitHub e visualizar seus repositórios. A aplicação apresenta animações elegantes e uma interface intuitiva para uma experiência de usuário aprimorada.
+Este projeto é uma aplicação web desenvolvida em React e Typescript que permite aos usuários pesquisar perfis do GitHub e visualizar seus repositórios. A aplicação apresenta animações elegantes e uma interface intuitiva para uma experiência de usuário aprimorada.
 
 ## Índice
 - [Instalação](#instalação)
