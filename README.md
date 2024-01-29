@@ -4,6 +4,7 @@ Este projeto é uma aplicação web desenvolvida em React e Typescript que permi
 
 ## Índice
 - [Instalação](#instalação)
+- [Como Utilizar](#como-utilizar)
 - [Funcionalidades](#funcionalidades)
 - [Contribuição](#contribuição)
 - [Licença](#licença)
