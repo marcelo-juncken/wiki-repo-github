@@ -2,7 +2,7 @@
 
 Este projeto é uma aplicação web desenvolvida em React e Typescript que permite aos usuários pesquisar perfis do GitHub e visualizar seus repositórios. A aplicação apresenta animações elegantes e uma interface intuitiva para uma experiência de usuário aprimorada.
 
-Acesse o projeto através do seguinte link: [GitHub User Repositories Viewer](https://marcelo-juncken.github.io/wiki-repo-github/).
+Acesse o projeto através do seguinte link: [GitHub Repositories Viewer](https://marcelo-github-wiki-repo.vercel.app)
 
 ## Índice
 - [Instalação](#instalação)
