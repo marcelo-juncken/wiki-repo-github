@@ -1,7 +1,7 @@
 {
   "name": "wiki-repo-github",
   "version": "0.1.0",
-  "homepage": "https://marcelo-juncken.github.io/wiki-repo-github",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "@types/jest": "^27.5.2",
